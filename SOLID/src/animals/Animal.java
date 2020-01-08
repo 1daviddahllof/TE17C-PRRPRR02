@@ -1,8 +1,7 @@
 package animals;
 
-import interfaces.IMotions;
 
-public abstract class Animal implements IMotions {
+public abstract class Animal {
 
     private String _color;
     private String _description;
@@ -18,6 +17,9 @@ public abstract class Animal implements IMotions {
     public abstract void sleep();
 
     public abstract void eat();
+    
+    public abstract void move();
+    
     public String getColor() {
         return _color;
     }

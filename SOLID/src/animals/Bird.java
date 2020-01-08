@@ -1,20 +1,20 @@
 package animals;
 
-public abstract class Bird extends Animal{
+public abstract class Bird extends Animal {
 
-    public Bird(String color, String descpriton)  {
-        super(color,descpriton);
-    }
+	public Bird(String color, String descpriton) {
+		super(color, descpriton);
+	}
 
-    public void speak() {
-        System.out.println("Bird is chirping!");
-    }
+	public void speak() {
+		System.out.println(this.getClass().getSimpleName() + " is chirping!");
+	}
 
-    public void sleep() {
-        System.out.println("Bird is sleeping!");
-    }
+	public void sleep() {
+		System.out.println(this.getClass().getSimpleName() + " is sleeping!");
+	}
 
-    public void eat() {
-        System.out.println("Bird is peck-peck-pecking away!");
-    }
+	public void eat() {
+		System.out.println(this.getClass().getSimpleName() + " is peck-peck-pecking away!");
+	}
 }

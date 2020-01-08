@@ -28,23 +28,11 @@ public class Main   {
             animal.printDescritption();
             System.out.println();
 
-            move(animal);
+            animal.move();
 
             System.out.println("###############");
             System.out.println();
         }
     }
 
-    private static void move(Animal animal) {
-        animal.dash();
-        animal.fly();
-        animal.jump();
-        animal.roll();
-        animal.sit();
-        animal.run();
-        animal.skip();
-        animal.slither();
-        animal.trot();
-        animal.swim();
-    }
 }

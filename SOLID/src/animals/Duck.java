@@ -1,29 +1,24 @@
 package animals;
-
-public class Duck extends Bird {
+import interfaces.IDuckMotions;
+public class Duck extends Bird implements IDuckMotions{
 
     public Duck(String color, String descpriton)  {
         super(color,descpriton);
     }
+    
+    public void move() {
+    	fly();
+    	jump();
+    	swim();
+    	run();
+    	sit();
+    	roll();
+    }
+
 
     @Override
     public void fly() {
         System.out.println("Duck is soaring majestically!");
-    }
-
-    @Override
-    public void trot() {
-        //not applicable!
-    }
-
-    @Override
-    public void skip() {
-        //not applicable!
-    }
-
-    @Override
-    public void slither() {
-        //not applicable!
     }
 
     @Override
@@ -51,8 +46,4 @@ public class Duck extends Bird {
         System.out.println("Duck is squatting on dem eggs!");
     }
 
-    @Override
-    public void dash() {
-        //not applicable!
-    }
 }

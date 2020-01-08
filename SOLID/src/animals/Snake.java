@@ -1,6 +1,6 @@
 package animals;
-
-public class Snake extends Animal {
+import interfaces.ISnakeMotions;
+public class Snake extends Animal implements ISnakeMotions{
 
     public Snake(String color, String descpriton)  {
         super(color,descpriton);
@@ -17,21 +17,14 @@ public class Snake extends Animal {
     public void eat() {
         System.out.println("Snake is devouring!");
     }
-
-    @Override
-    public void fly() {
-        //not applicable
+    
+    public void move() {
+    	slither();
+    	jump();
+    	swim();
+    	roll();
     }
 
-    @Override
-    public void trot() {
-        //not applicable
-    }
-
-    @Override
-    public void skip() {
-        //not applicable
-    }
 
     @Override
     public void slither() {
@@ -48,23 +41,10 @@ public class Snake extends Animal {
         System.out.println("Snake is swimming");
     }
 
-    @Override
-    public void run() {
-        //not applicable
-    }
 
     @Override
     public void roll() {
         System.out.println("Snake is rolling over!");
     }
 
-    @Override
-    public void sit() {
-        //not applicable
-    }
-
-    @Override
-    public void dash() {
-        //not applicable
-    }
 }

@@ -1,6 +1,7 @@
 package animals;
+import interfaces.IDogMotions;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements IDogMotions{
 
     public Dog(String color, String descpriton)  {
         super(color,descpriton);
@@ -17,25 +18,20 @@ public class Dog extends Animal {
     public void eat() {
         System.out.println("Dog is eating.");
     }
-
-    @Override
-    public void fly() {
-        //not applicable!
-    }
-
-    @Override
-    public void trot() {
-        System.out.println("Dog is a champion!");
+    
+    public void move() {
+    	skip();
+    	jump();
+    	swim();
+    	run();
+    	sit();
+    	dash();
+    	roll();
     }
 
     @Override
     public void skip() {
         System.out.println("Dog is happy!");
-    }
-
-    @Override
-    public void slither() {
-        //not applicable!
     }
 
     @Override

@@ -1,6 +1,6 @@
 package animals;
-
-public class Hedgehog extends Animal {
+import interfaces.IHedgehogMotions;
+public class Hedgehog extends Animal implements IHedgehogMotions{
 
     public Hedgehog(String color, String descpriton)  {
         super(color,descpriton);
@@ -17,11 +17,16 @@ public class Hedgehog extends Animal {
     public void eat() {
         System.out.println("Hedgehog is omnomnoming!");
     }
-
-    @Override
-    public void fly() {
-        //not applicable!
+    
+    public void move() {
+    	skip();
+    	swim();
+    	sit();
+    	dash();
+    	trot();
+    	roll();
     }
+
 
     @Override
     public void trot() {
@@ -34,23 +39,8 @@ public class Hedgehog extends Animal {
     }
 
     @Override
-    public void slither() {
-        //not applicable!
-    }
-
-    @Override
-    public void jump() {
-        //not applicable!
-    }
-
-    @Override
     public void swim() {
         System.out.println("Hedgehog is stalking snaek!");
-    }
-
-    @Override
-    public void run() {
-        //not applicable!
     }
 
     @Override

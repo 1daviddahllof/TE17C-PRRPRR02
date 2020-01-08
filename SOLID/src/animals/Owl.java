@@ -1,57 +1,37 @@
 package animals;
+import interfaces.IOwlMotions;
 
-public class Owl extends Bird {
+public class Owl extends Bird implements IOwlMotions{
 
     public Owl(String color, String descpriton)  {
         super(color,descpriton);
     }
-
-    public void fly() {
-        System.out.println("Owl is gliding silently through the air!");
+    
+    public void move() {
+    	skip();
+    	jump();
+    	sit();
+    	fly();
     }
 
-    @Override
-    public void trot() {
-        //not applicable!
-    }
-
-    @Override
-    public void skip() {
-        System.out.println("Owl is skipping and hopping!");
-    }
-
-    @Override
-    public void slither() {
-        //not applicable!
-    }
-
-    @Override
-    public void jump() {
-        System.out.println("Owl is jumping!");
-    }
-
-    @Override
-    public void swim() {
-        //not applicable!
-    }
-
-    @Override
-    public void run() {
-        //not applicable!
-    }
-
-    @Override
-    public void roll() {
-        //not applicable!
-    }
 
     @Override
     public void sit() {
         System.out.println("Owl is squatting on dem eggs!");
     }
+    
+    @Override
+    public void jump() {
+        System.out.println("Owl is jumping!");
+    }
+    
+    @Override
+    public void fly() {
+        System.out.println("Owl is gliding silently through the air!");
+    }
 
     @Override
-    public void dash() {
-        //not applicable!
+    public void skip() {
+        System.out.println("Owl is skipping and hopping!");
     }
 }
